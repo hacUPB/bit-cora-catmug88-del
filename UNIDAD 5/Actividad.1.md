@@ -1,5 +1,5 @@
 # Actividad 1
-Diagnóstico programación orientada a objetos:
+## Parte 1: Diagnóstico programación orientada a objetos:
 
 1. ¿Qué es el encapsulamiento para ti? Describe una situación en la que te haya sido útil o donde hayas visto su importancia.
 
@@ -16,3 +16,35 @@ Como programadora, yo usaría la herencia para poder reutilizar código, mantene
 3. ¿Qué es el polimorfismo? Describe con tus palabras qué significa que un código sea “polimórfico”.
 
 r/ Es lo que permite que un método pueda ser implementado por varios objetos, pero cada uno tiene su propia manera de implementarlo según su definición del mismo. 
+
+## Parte 2: Analisis del código en c#
+
+**Encapsulamiento:**
+
+- Señala una línea de código que sea un ejemplo claro de encapsulamiento y explica por qué lo es.
+
+- ¿Por qué crees que el campo nombre es private pero la propiedad Nombre es public? ¿Qué problema se evita con esto?
+
+r/ Una línea de código que implementa encapsulamiento es 
+
+``` c#
+public abstract class Figura
+{    
+	private string nombre;
+    public string Nombre 
+    {        get { return nombre;}
+		    protected set { nombre = value; }
+    }
+```
+Específicamente private string nombre; en el cual se declara una variable privada de tipo string, lo que significa que no se puede acceder a ella desde ninguna otra clase. En cambio esta la variable Nombre, la cual si es pública por lo que da acceso al dato. Esto es importante porque evita que se cambie el nombre de la figura sin querer o que le asignen valores inválidos.
+
+**Herencia:**
+
+- ¿Cómo se evidencia la herencia en la clase Circulo?
+- Un objeto de tipo Circulo, además de Radio, ¿Qué otros datos almacena en su interior gracias a la herencia?
+
+r/ Se puede evidenciar la herencia en Círculo en la línea 
+
+```c#
+
+```
