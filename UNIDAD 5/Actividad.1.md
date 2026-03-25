@@ -46,5 +46,29 @@ Específicamente private string nombre; en el cual se declara una variable priva
 r/ Se puede evidenciar la herencia en Círculo en la línea 
 
 ```c#
-
+public class Circulo : Figura
 ```
+Los dos puntos ":" significa que circulo hereda de figura, es decir automaticamente tiene los mismos atributos y metodos, en este caso el atributo nombre y el metodo dibujar() aunque lo sobreescribe para sus propias necesidades. Además del Radio también almacena el Nombre
+
+**Polimorfismo**
+
+- Observa el bucle foreach. La variable fig es de tipo Figura, pero a veces contiene un Circulo y otras un Rectangulo. Cuando se llama a fig.Dibujar(), el programa ejecuta la versión correcta. En tu opinión, ¿Cómo crees que funciona esto “por debajo”? No necesitas saber la respuesta correcta, solo quiero que intentes razonar cómo podría ser.
+
+r/ creo que internamente lo que esta pasando es que el programa implementa la funcion correspondiente a cada tipo de figura, ya que el metodo varia dependiendo de la figura, y por eso primero identifica que tipo de figura es para saber que metodo ejecutar.
+
+## Parte 3: hipótesis sobre la implementación
+
+Esta es la parte más importante. Imagina que eres un diseñador de lenguajes de programación. Tienes que decidir cómo implementar estos conceptos en la memoria y en el procesador. No hay respuestas incorrectas, solo ideas. Dibuja si te ayuda.
+
+1. Memoria y herencia: cuando creas un objeto Rectangulo, este tiene Base, Altura y también Nombre. ¿Cómo te imaginas que se organizan esos tres datos en la memoria del computador para formar un solo objeto?
+2. El mecanismo del polimorfismo: pensemos de nuevo en la llamada fig.Dibujar(). El compilador solo sabe que fig es una Figura. ¿Cómo decide el programa, mientras se está ejecutando, si debe llamar al Dibujar del Circulo o al del Rectangulo? Lanza algunas ideas o hipótesis.
+3. La barrera del encapsulamiento: ¿Cómo crees que el compilador logra que no puedas acceder a un miembro private desde fuera de la clase? ¿Es algo que se revisa cuando escribes el código, o es una protección que existe mientras el programa se ejecuta? ¿Por qué piensas eso?
+
+r1/ Al crear el rectángulo, este contiene nombre, base y altura, el nombre lo hereda de la clase figura, es como si se copiara la info de su clase superior y despues se agrega sus datos nuevos (base y altura) como si la clase figura tuviera una extension llamada rectangulo.
+
+r2/ Mi hipótesis de como funciona esto es que cada objeto tiene una lista de instrucciones a seguir dependiendo del tipo de figura, y el programa al ejecutar fig.Dibujar() primero analiza qué figura esta tratando y dependiendo de esto realiza la instruccion pertinente.
+
+r3/ Creo que el compilador lee el codigo y si al inicializar un dato, metodo con "private", este toma nota de que esta "con seguro" y solo una clase tiene la llave, el dato sigue existiendo pero para evitar fallas en la lógica del programa el codigo tiene esta regla.Como una medida de seguridad, mas que una barrera física.
+
+
+
