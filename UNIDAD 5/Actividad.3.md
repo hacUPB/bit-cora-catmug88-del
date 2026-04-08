@@ -25,3 +25,7 @@ CircularExplotion: draw
 En cuanto a StarExplotion aplica lo mismo excepto que su draw es un comportamiento propio, es decir que el metodo para dibujarla es diferente al del circularexplotion.
 
 ![alt text](image-8.png)
+
+## Conclusión
+
+El polimorfismo es posible gracias a la tabla virtual al momento de ejecución, ya que permite que la clase virtual Particle tenga el método draw() pero en los objetos reales tienen comportamientos diferentes dependiendo del tipo de objeto.
