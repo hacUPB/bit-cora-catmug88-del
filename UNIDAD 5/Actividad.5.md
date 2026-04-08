@@ -2,6 +2,6 @@
 
 **Concepto de herencia:** en ofApp.h la clase CircularExplosion hereda de la clase ExplotionParticle que a su vez hereda de Particle.
 
-{captura en la memoria el objeto}
+{captura en la memoria el objeto explosion particle}
 - Comparar jerarquia de clases con los campos en memoria del objeto:
 r/ 
