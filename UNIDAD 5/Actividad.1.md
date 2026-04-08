@@ -71,4 +71,3 @@ r2/ Mi hipótesis de como funciona esto es que cada objeto tiene una lista de in
 r3/ Creo que el compilador lee el codigo y si al inicializar un dato, metodo con "private", este toma nota de que esta "con seguro" y solo una clase tiene la llave, el dato sigue existiendo pero para evitar fallas en la lógica del programa el codigo tiene esta regla.Como una medida de seguridad, mas que una barrera física.
 
 
-
