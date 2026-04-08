@@ -45,3 +45,7 @@ void ofApp::update() {
 ```
 
 
+![alt text](image.png)
+
+este diagrama muestra como esta organizado el programa
+
