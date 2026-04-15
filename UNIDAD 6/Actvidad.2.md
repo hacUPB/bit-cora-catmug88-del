@@ -30,9 +30,12 @@ r/ Cuando se presiona la tecla a, el método keyPressed de ofApp llama a notify,
 
     - Ve al método `notify` en la clase `Subject`. ¿Qué hace este método?
 
-r/ 
+r/ Lee la lista de observers y le llama onNotify a cada uno, enviándoles el evento como un string. En otras palabras, se encarga de repartir el mensaje a todos los suscritos, sin importar quiénes son ni qué hagan con él.
 
     - Localiza el método que implementa la interfaz `Observer` en la clase `Particle` (`onNotify`). ¿Qué hace este método cuando recibe el evento “attract”?
+
+    r/ 
+    
 3. **Registro y eliminación de observadores:**
     - ¿En qué parte del código se añaden las instancias de `Particle` como observadores de `ofApp`? (Busca dónde se llama a `addObserver`).
     - Aunque no se usa explícitamente en este ejemplo simple, ¿Dónde se eliminarían los observadores si fuera necesario (por ejemplo, si una partícula se destruyera durante la ejecución)? (Busca `removeObserver`). ¿Por qué es importante el destructor de `ofApp` en este contexto?
