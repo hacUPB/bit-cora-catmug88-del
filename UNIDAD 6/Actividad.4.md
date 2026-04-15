@@ -21,6 +21,7 @@ Examina el código (`ofApp.h`, `ofApp.cpp`) enfocándote en las clases relacion
 
 1. **Identifica los componentes:**
     - ¿Cuál es la clase `Context`? ¿Qué miembro utiliza para mantener el estado actual?
+    r/ 
     - ¿Cuál es la interfaz `State`? ¿Qué métodos importantes define? (Piensa en `update`, `onEnter`, `onExit`).
     - Enumera las clases `ConcreteState`. ¿Qué comportamiento específico encapsula cada una?
 2. **Delegación del comportamiento:**
